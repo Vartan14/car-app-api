@@ -1,39 +1,49 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
     <title>Car List</title>
-    <style>
-        table, th, td {
-                          border: 1px solid;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'css/car.css' %}">
 </head>
 
 <body>
-    <h1>Car List</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>License Plate</th>
-                <th>Brand</th>
-                <th>Year</th>
-                <th>Color</th>
-                <th>Condition</th>
-                <th>Owner</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for car in cars %}
-            <tr>
-                <td>{{ car.license_plate }}</td>
-                <td>{{ car.brand }}</td>
-                <td>{{ car.year }}</td>
-                <td>{{ car.color }}</td>
-                <td>{{ car.condition }}</td>
-                <td><a href="{% url 'owner' car.owner.id %}">{{ car.owner }}</a></td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <div class="container">
+        <div class="content">
+            <div class="title-div">
+                <h1>Car List</h1>
+            </div>
+            <div class="table-div">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>License Plate</th>
+                            <th>Brand</th>
+                            <th>Year</th>
+                            <th>Color</th>
+                            <th>Condition</th>
+                            <th>Owner</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for car in cars %}
+                        <tr>
+                            <td>{{ car.license_plate }}</td>
+                            <td>{{ car.brand }}</td>
+                            <td>{{ car.year }}</td>
+                            <td>{{ car.color }}</td>
+                            <td>{{ car.condition }}</td>
+                            <td><a href="{% url 'owner' car.owner.id %}">{{ car.owner }}</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="add-button-div">
+                <a href="{% url 'add_car' %}" class="add-button">Add new car</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

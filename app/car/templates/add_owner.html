@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>Add Car</title>
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add Owner</h2>
+        <form method="post">
+            {% csrf_token %}
+
+            <label for="id_license_plate">First Name</label>
+            {{ form.first_name }}
+            <label for="id_brand">Last Name</label>
+            {{ form.last_name }}
+            <label for="id_year">Sex</label>
+            {{ form.sex }}
+            <label for="id_color">Date of birth</label>
+            {{ form.date_of_birth }}
+            <label for="id_condition">Address</label>
+            {{ form.address }}
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</body>
+</html>
