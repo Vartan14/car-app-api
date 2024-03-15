@@ -21,7 +21,8 @@ def car_table(request):
     :param request: HttpRequest object
     :return: Rendered HTML template with the car table
     """
-    cars = Car.objects.all()
+    sort_by = request.GET.get('sort_by', 'id')
+    cars = Car.objects.all().order_by(sort_by)
     return render(request, 'car_table.html', {'cars': cars})
 
 

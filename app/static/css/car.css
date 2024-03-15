@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    margin-top: 50px;
 }
 
 .content {
@@ -17,12 +17,19 @@
 
 .title-div {
     margin-bottom: 20px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+h1 {
+    margin: 0;
 }
 
 table, th, td {
     border: 1px solid;
     border-collapse: collapse;
-    width: 90%;
+    width: 100%;
 }
 
 th, td {
@@ -44,7 +51,7 @@ th:nth-child(6), td:nth-child(6) {
 }
 
 
-.add-button-div {
+.button-div {
     margin-top: 25px;
     text-align: start;
 }
@@ -89,5 +96,11 @@ button {
 .delete-button:hover {
     background-color: #d10f1f;
 }
+
+.sort-select {
+        margin-top: 20px;
+        padding: 5px;
+        font-size: 16px;
+    }
 
 
