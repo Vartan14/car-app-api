@@ -49,10 +49,7 @@ th:nth-child(6), td:nth-child(6) {
     text-align: start;
 }
 
-.add-button {
-    font-size: 16px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
+button {
     color: white;
     border: none;
     border-radius: 5px;
@@ -60,6 +57,37 @@ th:nth-child(6), td:nth-child(6) {
     text-decoration: none;
 }
 
+.add-button {
+    font-size: 18px;
+    padding: 10px 30px;
+    background-color: #4CAF50;
+}
+
 .add-button:hover {
     background-color: #45a049;
 }
+
+.edit-button, .delete-button {
+    font-size: 14px;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+
+.edit-button {
+    background-color: #22a6f2;
+}
+
+.edit-button:hover {
+    background-color: #239ade;
+}
+
+.delete-button {
+    background-color: #f2071b;
+}
+
+.delete-button:hover {
+    background-color: #d10f1f;
+}
+
+

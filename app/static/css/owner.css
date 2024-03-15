@@ -41,3 +41,30 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
 }
+
+button {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.edit-button {
+    background-color: #22a6f2;
+}
+
+.edit-button:hover {
+    background-color: #239ade;
+}
+
+.delete-button {
+    background-color: #f2071b;
+}
+
+.delete-button:hover {
+    background-color: #d10f1f;
+}

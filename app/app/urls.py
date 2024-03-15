@@ -17,10 +17,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from car.views import car_table, owner_detail
+from car.views import (index,
+                       car_table, owner_detail,
+                       add_car, edit_car, delete_car,
+                       add_owner, edit_owner, delete_owner)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', index, name='index'),
     path('cars/', car_table, name='cars'),
+    path('add-car/', add_car, name='add_car'),
+    path('edit-car/<int:car_id>', edit_car, name='edit_car'),
+    path('delete-car/<int:car_id>', delete_car, name='delete_car'),
+
     path('owner/<int:owner_id>/', owner_detail, name='owner'),
+    path('add-owner/', add_owner, name='add-owner'),
+    path('edit-owner/<int:owner_id>/', edit_owner, name='edit-owner'),
+    path('delete-owner/<int:owner_id>/', delete_owner, name='delete-owner'),
 ]

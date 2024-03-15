@@ -1,5 +1,7 @@
- body {
+ * {
      font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
  }
 
 .form-container {
@@ -60,3 +62,22 @@ button[type='button'] {
 button[type='button']:hover {
     background-color: #239ade;
 }
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+
+input.error {
+    border-color: red;
+}
+
+.errorlist {
+    color: red;
+    font-size: 14px;
+    list-style-type: none;
+    margin-top: 5px;
+}
+
+
