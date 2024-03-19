@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.content {
+    width: 80%;
+}
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    width: auto;
+}
+
+th {
+    background-color: #d9d8d7;
+}
+
+td:nth-child(1) {
+    width: 70%;
+}
+
+td:nth-child(2) {
+    width: 30%;
+}

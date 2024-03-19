@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Statistics</title>
+    <link rel="stylesheet" href="{% static 'css/statistics.css' %}">
+</head>
+    <body>
+        <div class="container">
+            <div class="content">
+                 <h1>Statistics</h1>
+                 <table>
+                    <tbody>
+                        <tr>
+                            <td>Total records in Owner table:</td>
+                            <td>{{ owner_count }}</td>
+                        </tr>
+                        <tr>
+                            <td>Total records in Car table:</td>
+                            <td>{{ car_count }}</td>
+                        </tr>
+                        <tr>
+                            <td>Records created in the last month in Owner table:</td>
+                            <td>{{ owner_count_last_month }}</td>
+                        </tr>
+                        <tr>
+                            <td>Records created in the last month in Car table:</td>
+                            <td>{{ car_count_last_month }}</td>
+                        </tr>
+                        <tr>
+                            <td>The last record in Owner table:</td>
+                            <td>{{ last_owner_record }}</td>
+                        </tr>
+                        <tr>
+                            <td>Owner with the most associated records in Car table:</td>
+                            <td>{{ owner_with_most_cars }}</td>
+                        </tr>
+        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+       
+    
+    </body>
+</html>

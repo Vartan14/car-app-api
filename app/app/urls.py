@@ -20,7 +20,8 @@ from django.urls import path
 from car.views import (index,
                        car_table, owner_detail,
                        add_car, edit_car, delete_car,
-                       add_owner, edit_owner, delete_owner)
+                       add_owner, edit_owner, delete_owner,
+                       statistics)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,4 +35,6 @@ urlpatterns = [
     path('add-owner/', add_owner, name='add-owner'),
     path('edit-owner/<int:owner_id>/', edit_owner, name='edit-owner'),
     path('delete-owner/<int:owner_id>/', delete_owner, name='delete-owner'),
+
+    path('statistics/', statistics, name='statistics')
 ]

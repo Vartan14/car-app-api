@@ -64,6 +64,33 @@
                 <a href="{% url 'add_car' %}"><button class="add-button">Add new car</button></a>
                 
             </div>
+            <div class="search">
+                <form method="get">
+                    {% csrf_token %}
+                    <div class="search-elements">
+                        <div class="search-title">
+                            <h2>Search</h2>
+                        </div>
+                        <div class="search-input">
+                            <div class="brand-search">
+                                <p>Brand</p>
+                                {{ form.keyword }}
+                            </div>
+                            <div class="min-year">
+                                 <p>Year from</p>
+                                 {{ form.min_year }}
+                            </div>
+                            <div class="max-year">
+                                <p>Year to</p>
+                                {{ form.max_year }}
+                            </div>
+                             <button type="submit" class="search-button">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
         </div>
     </div>
 </body>
