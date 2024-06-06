@@ -1,6 +1,5 @@
 from django.core.exceptions import ValidationError
 from django.db import models
-from django.utils import timezone
 
 
 def validate_year(value):
@@ -39,6 +38,3 @@ class Car(models.Model):
 
     def __str__(self):
         return f"{self.color} {self.brand}"
-
-
-

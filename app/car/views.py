@@ -47,10 +47,6 @@ def car_table(request):
 def owner_detail(request, owner_id):
     """
     Shows details about a specific owner based on the owner_id.
-
-    :param request: HttpRequest object
-    :param owner_id: ID of the owner
-    :return: Rendered HTML template with the details of the specified owner
     """
     owner = Owner.objects.get(id=owner_id)
     return render(request, 'owner_detail.html', {'owner': owner})
@@ -69,7 +65,6 @@ def add_car(request):
         'form': form,
         'title': 'Add car',
     }
-
     return render(request, 'car_form.html', context)
 
 
