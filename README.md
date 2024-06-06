@@ -4,8 +4,8 @@ Welcome to the Car App API repository! This project provides a robust RESTful AP
 
 ## Features
 
-- **User Authentication**: Secure user login and registration.
 - **CRUD Operations**: Create, Read, Update, and Delete functionality for car data.
+- **Convenient Search**: Search data by different filters.
 - **Modular Design**: Organized and scalable code structure.
 
 ## Installation
@@ -46,15 +46,18 @@ Welcome to the Car App API repository! This project provides a robust RESTful AP
 
 ## API Endpoints
 
-- **Authentication**
-  - `POST /register`: Register a new user
-  - `POST /login`: User login
 - **Car Management**
-  - `GET /cars`: Get a list of all cars
-  - `POST /cars`: Add a new car
-  - `GET /cars/<id>`: Get a specific car by ID
-  - `PUT /cars/<id>`: Update a car by ID
-  - `DELETE /cars/<id>`: Delete a car by ID
+  - `GET /cars/`: Get a list of all cars
+  - `POST /add-car/`: Add a new car
+  - `PUT /edit-car/<int:car_id>`: Edit a car by ID
+  - `DELETE /delete-car/<int:car_id>`: Delete a car by ID
+- **Owner Management**
+  - `GET /owner/<int:owner_id>/`: Get owner details by ID
+  - `POST /add-owner/`: Add a new owner
+  - `PUT /edit-owner/<int:owner_id>/`: Edit an owner by ID
+  - `DELETE /delete-owner/<int:owner_id>/`: Delete an owner by ID
+- **Statistics**
+  - `GET /statistics/`: Get statistics
 
 ## Requirements
 
